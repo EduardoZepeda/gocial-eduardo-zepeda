@@ -6,7 +6,7 @@ import (
 	"github.com/dorneanu/gocial/internal/entity"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/linkedin"
-	"github.com/markbates/goth/providers/twitter"
+	"github.com/markbates/goth/providers/twitterv2"
 )
 
 type OAuthConfig struct {
@@ -73,7 +73,7 @@ func SetupAuthProviders(confs []OAuthConfig) entity.AuthProviderIndex {
 
 			goth.UseProviders(idpLinkedin)
 		} else if oauthConf.ProviderName == "twitter" {
-			idpTwitter := twitter.New(
+			idpTwitter := twitterv2.New(
 				oauthConf.ClientID,
 				oauthConf.ClientSecret,
 				oauthConf.CallbackURL,
