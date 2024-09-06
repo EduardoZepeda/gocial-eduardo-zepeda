@@ -29,7 +29,7 @@ func init() {
 	e := echo.New()
 
 	webServerConf := server.HTTPServerConfig{
-		ListenAddr:      "gocial.netlify.app",
+		ListenAddr:      "gocial-eduardo-zepeda.netlify.app",
 		TokenSigningKey: "secret key",
 		TokenExpiration: 5,
 	}
@@ -49,7 +49,7 @@ func init() {
 			ProviderName: "twitter",
 			ClientID:     os.Getenv("TWITTER_CLIENT_KEY"),
 			ClientSecret: os.Getenv("TWITTER_CLIENT_SECRET"),
-			CallbackURL:  fmt.Sprintf("http://%s/auth/callback/twitter", webServerConf.ListenAddr),
+			CallbackURL:  fmt.Sprintf("https://%s/auth/callback/twitter", webServerConf.ListenAddr),
 		},
 	}
 

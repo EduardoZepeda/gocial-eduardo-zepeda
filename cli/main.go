@@ -51,13 +51,13 @@ func main() {
 							Scopes:       []string{"r_emailaddress", "r_liteprofile", "w_member_social"},
 							ClientID:     os.Getenv("LINKEDIN_CLIENT_ID"),
 							ClientSecret: os.Getenv("LINKEDIN_CLIENT_SECRET"),
-							CallbackURL:  fmt.Sprintf("http://%s/auth/callback/linkedin", webServerConf.ListenAddr),
+							CallbackURL:  fmt.Sprintf("https//%s/auth/callback/linkedin", webServerConf.ListenAddr),
 						},
 						oauth.OAuthConfig{
 							ProviderName: "twitter",
 							ClientID:     os.Getenv("TWITTER_CLIENT_KEY"),
 							ClientSecret: os.Getenv("TWITTER_CLIENT_SECRET"),
-							CallbackURL:  fmt.Sprintf("http://%s/auth/callback/twitter", webServerConf.ListenAddr),
+							CallbackURL:  fmt.Sprintf("https://%s/auth/callback/twitter", webServerConf.ListenAddr),
 						},
 					}
 
