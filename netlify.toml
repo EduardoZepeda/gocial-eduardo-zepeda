@@ -25,5 +25,5 @@ functions = "/functions"
   status = 200
 
 [build.environment]
-GO_VERSION = "1.18"
+GO_VERSION = "1.20.0"
 GO111MODULE = "on"
