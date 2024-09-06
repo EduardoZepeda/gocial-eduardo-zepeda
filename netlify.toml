@@ -1,29 +1,29 @@
 [build]
 base = "/"
 command = "make netlify"
-functions = "/functions"
 publish = "/public"
+functions = "/functions"
 
 [[redirects]]
-from = "/*"
-status = 200
-to = "/.netlify/functions/lambda/:splat"
+  from = "/*"
+  to = "/.netlify/functions/lambda/:splat"
+  status = 200
 
 [[redirects]]
-from = "/static/main.css"
-status = 200
-to = "/.netlify/functions/lambda/static/main.css"
+  from = "/static/main.css"
+  to = "/.netlify/functions/lambda/static/main.css"
+  status = 200
 
 [[redirects]]
-from = "/auth/info"
-status = 200
-to = "/.netlify/functions/lambda/auth/info"
+  from = "/auth/info"
+  to = "/.netlify/functions/lambda/auth/info"
+  status = 200
 
 [[redirects]]
-from = "/share/"
-status = 200
-to = "/.netlify/functions/lambda/share"
+  from = "/share/"
+  to = "/.netlify/functions/lambda/share"
+  status = 200
 
 [build.environment]
-GO111MODULE = "on"
 GO_VERSION = "1.18"
+GO111MODULE = "on"
