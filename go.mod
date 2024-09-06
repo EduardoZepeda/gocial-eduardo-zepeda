@@ -1,6 +1,6 @@
 module github.com/dorneanu/gocial
 
-go 1.18
+go 1.20
 
 require (
 	github.com/aws/aws-lambda-go v1.32.0
