@@ -30,7 +30,7 @@ func init() {
 
 	webServerConf := server.HTTPServerConfig{
 		ListenAddr:      "gocial-eduardo-zepeda.netlify.app",
-		TokenSigningKey: "secret key",
+		TokenSigningKey: os.Getenv("SECRET_KEY"),
 		TokenExpiration: 5,
 	}
 	// TODO: Is this still needed
